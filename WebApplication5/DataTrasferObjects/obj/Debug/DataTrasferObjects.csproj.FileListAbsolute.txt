@@ -1,0 +1,5 @@
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataTrasferObjects\bin\Debug\DataTrasferObjects.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataTrasferObjects\bin\Debug\DataTrasferObjects.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataTrasferObjects\obj\Debug\DataTrasferObjects.csprojResolveAssemblyReference.cache
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataTrasferObjects\obj\Debug\DataTrasferObjects.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataTrasferObjects\obj\Debug\DataTrasferObjects.pdb

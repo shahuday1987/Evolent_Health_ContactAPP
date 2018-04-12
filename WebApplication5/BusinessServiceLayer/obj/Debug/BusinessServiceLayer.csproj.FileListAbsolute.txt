@@ -1,0 +1,15 @@
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\BusinessServiceLayer.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\BusinessServiceLayer.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\obj\Debug\BusinessServiceLayer.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\obj\Debug\BusinessServiceLayer.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\SimpleInjector.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\SimpleInjector.xml
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\obj\Debug\BusinessServiceLayer.csprojResolveAssemblyReference.cache
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\DataBase\ContactDB.mdf
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\DataBase\ContactDB_log.ldf
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\DataRepository.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\DataTrasferObjects.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\Dapper.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\DataRepository.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\DataTrasferObjects.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\BusinessServiceLayer\bin\Debug\Dapper.xml

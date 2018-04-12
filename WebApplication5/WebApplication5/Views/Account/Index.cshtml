@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<div id="messgaeid" class="alert alert-success fade out">
+    <strong id="textid"></strong>
+</div>
+<h2>Contact List</h2>
+<p>
+    <a href="#costumModal6" role="button" onclick="CreateContactList()" data-toggle="modal">
+        Create New
+    </a>
+</p>
+<div id="modalDiv"></div>
+<div id="cover-spin"></div>
+<input id="DeleteId" type="hidden" />
+
+<div id="costumModal6" class="modal" data-easein="swoopIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title">
+                    <span id="headerid"></span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div id="modalDivCreate"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="pleaseWaitDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Are you sure want to delete?</h1>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" onclick="NoDeleteContact()" aria-hidden="true">
+                        No
+                    </button>
+                    <button id="modeldeleteid" onclick="DeleteContact()" type="submit" class="btn btn-primary">
+                        Delete
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            ViewContactList();
+        });
+        function ViewContactList() {
+
+            $('#cover-spin').show(0)
+            //var subscriptionGrpInput = $("#subscriptionGRP").val();
+            $.ajax({
+                type: 'get',
+                dataType: 'html',
+                cache: false,
+                url: '@Url.Action("ContactList", "Account")',
+                // data: { perpetualGrp: perpetualGrpInput, subscriptionGrp: subscriptionGrpInput, productProfileId: productProfileIdInput, plEffectiveId: plEffectiveIdInput, productLineCode: productLinecodeInput },
+                success: function (response, textStatus, jqXHR) {
+                    //$("#pricingTable1").html(response);
+                    // $("#addHistoryVersion").DataTable().destroy();
+                    $("#modalDiv").html("");
+                    $("#modalDiv").html(response);
+                    $('#cover-spin').hide(0)
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#cover-spin').hide(0)
+                    // alert('Error - ' + errorThrown);
+                }
+            });
+        }
+
+
+        function displaymsg(text) {
+            $("#textid").text(text);
+            $("#messgaeid").removeClass("alert alert-success fade out");
+            $("#messgaeid").addClass("alert alert-success fade in");
+            setTimeout(function () {
+                $("#messgaeid").removeClass("alert alert-success fade in");
+                $("#messgaeid").addClass("alert alert-success fade out");
+            }, 3000);
+        }
+
+        function CreateContactList() {
+            $('#cover-spin').show(0)
+            //var subscriptionGrpInput = $("#subscriptionGRP").val();
+            $.ajax({
+                type: 'get',
+                dataType: 'html',
+                cache: false,
+                url: '@Url.Action("CreateContactList", "Account")',
+                // data: { perpetualGrp: perpetualGrpInput, subscriptionGrp: subscriptionGrpInput, productProfileId: productProfileIdInput, plEffectiveId: plEffectiveIdInput, productLineCode: productLinecodeInput },
+                success: function (response, textStatus, jqXHR) {
+                    //$("#pricingTable1").html(response);
+                    // $("#addHistoryVersion").DataTable().destroy();
+                    $("#modalDivCreate").html("");
+                    $("#modalDivCreate").html(response);
+                    $('#cover-spin').hide(0)
+                    $('#modelsaveid').text('Create');
+                    $('#headerid').text('Create New Contact');
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#cover-spin').hide(0)
+                    // alert('Error - ' + errorThrown);
+                }
+            });
+        }
+        function updateContactList(id) {
+            $('#cover-spin').show(0)
+            //var subscriptionGrpInput = $("#subscriptionGRP").val();
+            $.ajax({
+                type: 'get',
+                dataType: 'html',
+                cache: false,
+                url: '@Url.Action("UpdateContactList", "Account")',
+                data: { id: id },
+                success: function (response, textStatus, jqXHR) {
+                    //$("#pricingTable1").html(response);
+                    // $("#addHistoryVersion").DataTable().destroy();
+                    $("#modalDivCreate").html("");
+                    $("#modalDivCreate").html(response);
+                    $('#cover-spin').hide(0)
+                    $('#modelsaveid').text('Save Changes');
+                    $('#headerid').text('Update Contact Details');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#cover-spin').hide(0)
+                    // alert('Error - ' + errorThrown);
+                }
+            });
+        }
+        function ConfirmDeleteContact(id) {
+            $('#DeleteId').text(id);
+            $('#pleaseWaitDialog').appendTo("body").modal('show');
+        }
+
+        function NoDeleteContact() {
+            $('#DeleteId').text('0');
+            $('#pleaseWaitDialog').appendTo("body").modal('hide');
+        }
+
+        function onAjaxRequestSuccess(response) {
+            //$("#modalDiv").html("");
+            //$("#modalDiv").html(response);         
+
+        }
+
+        function ValidateForm() {
+         
+            $('#UpdateDetailsformId').removeData("validator");
+            $('#UpdateDetailsformId').removeData("unobtrusiveValidation");
+            $.validator.unobtrusive.parse('#UpdateDetailsformId');
+
+
+            return $.validator.unobtrusive.parse($('form'));
+        }
+        function onAjaxRequestSuccess1(response) {
+            //$("#modalDiv").html("");
+            //$("#modalDiv").html(response);
+            $('#closemeid').click();
+            displaymsg("Successfully Saved!")
+        }
+
+
+        function DeleteContact() {
+            var id = $('#DeleteId').text();
+            //var subscriptionGrpInput = $("#subscriptionGRP").val();
+            $.ajax({
+                type: 'POST',
+                dataType: 'html',
+                cache: false,
+                url: '@Url.Action("DeleteContact", "Account")',
+                data: { id: id },
+                success: function (response, textStatus, jqXHR) {
+                    $("#modalDiv").html("");
+                    $("#modalDiv").html(response);
+                    $('#cover-spin').hide(0)
+                    $('#pleaseWaitDialog').appendTo("body").modal('hide');
+                    displaymsg("Successfully Deleted!")
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#cover-spin').hide(0)
+                    // alert('Error - ' + errorThrown);
+                }
+            });
+        }
+
+
+    </script>
+     
+    <script src="~/Scripts/index.js"></script>
+

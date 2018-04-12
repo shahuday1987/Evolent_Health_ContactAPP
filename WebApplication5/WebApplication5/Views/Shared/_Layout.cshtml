@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Contact Application</title>
+    <meta name="keywords" content="Contact Application" />
+    <meta name="description" content="Contact Application" />     
+    <link href="~/Content/style.css" rel="stylesheet" />    
+    @*@Scripts.Render("~/bundles/jquery")*@
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js'></script>
+
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+   
+    <script language="javascript" type="text/javascript">
+        function clearText(field) {
+            if (field.defaultValue == field.value) field.value = '';
+            else if (field.value == '') field.value = field.defaultValue;
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Top Menu Start -->
+    @Html.Partial("_TopMenu")
+    <!-- End of Top Menu-->
+    <!-- Banner Start -->
+    @Html.Partial("_Banner")
+    <!-- End of Banner -->
+
+
+    <div id="templatemo_content_wrapper"  >
+        <div id="templatemo_content"  >
+
+            <!-- Content Area -->
+
+            @RenderBody()
+            <!-- End of Content Area -->
+            <!-- Right Sidebar -->
+         
+            <!-- End of Right Sidebar -->
+
+            <div class="cleaner"></div>
+        </div>
+       
+    </div>
+    
+
+    <!-- Footer -->
+    @Html.Partial("_footer")
+    <!-- End of Footer -->
+</body>
+</html>

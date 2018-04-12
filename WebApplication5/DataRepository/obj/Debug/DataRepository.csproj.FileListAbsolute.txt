@@ -1,0 +1,11 @@
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\DataRepository.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\DataRepository.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\obj\Debug\DataRepository.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\obj\Debug\DataRepository.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\obj\Debug\DataRepository.csprojResolveAssemblyReference.cache
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\DataBase\ContactDB.mdf
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\DataBase\ContactDB_log.ldf
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\Dapper.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\DataTrasferObjects.dll
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\DataTrasferObjects.pdb
+C:\Users\t_shahu\MyProjects\NotificationApplication\WebApplication5\DataRepository\bin\Debug\Dapper.xml
